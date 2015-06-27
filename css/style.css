@@ -1558,6 +1558,8 @@ footer{
     margin-top: 5px;
     margin-bottom: 5px;
     margin-right:30px;
+    width: 200px;
+    height: auto;
 }
 #sub-footer ul.social-network {
 	float:right;
@@ -1783,6 +1785,94 @@ article img.pull-right, article .align-right{
 	margin-top:40px;
 }
 
+table.company {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0px 15px;
+    font-size: 12px;
+}
+
+table.company th,
+table.company td {
+    padding: 10px;
+}
+
+table.company th {
+    background: #000080;
+    vertical-align: middle;
+    text-align: left;
+    width: 100px;
+    overflow: visible;
+    position: relative;
+    color: #fff;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+table.company th:after {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-left-color: #000080;
+    border-width: 10px;
+    margin-top: -10px;
+}
+
+table.default{
+    width:100%;
+    border-collapse: separate;
+    border-spacing: 0px;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+table.default th{
+    padding: 4px;
+    text-align: left;
+    vertical-align: top;
+    color: #444;
+    background-color: #ccc;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+table.default td{
+    padding: 4px;
+    background-color: #fafafa;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+/* firefox */
+@-moz-document url-prefix() {
+    table.company th::after {
+        float: right;
+        padding: 0;
+        left: 30px;
+        top: 10px;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: relative;
+        pointer-events: none;
+        border: 10px solid transparent;
+        border-left: #295890 10px solid;
+        margin-top: -10px;
+    }
+}
+
+table.company td {
+    background: #f8f8f8;
+    width: 360px;
+    padding-left: 20px;
+}
 
 /* =============================
 21. Media queries 
