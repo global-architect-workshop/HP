@@ -16,77 +16,17 @@
 <!-- Theme skin -->
 <link href="../skins/default.css" rel="stylesheet" />
 
+<script src="../js/jquery.js"></script>
+<script src="../js/commonSection.js"></script>
+
 </head>
 <body>
 <div id="wrapper">
-	<!-- start header -->
-	<header>
-        <!-- スマホ用メニュー -->
-        <div class="visible-xs drawer drawer-right" style="overflow:auto;">
-            <div>
-                <a class="navbar-brand" href="../index.html">
-                <img src="../img/new_ga_logo.jpg" alt=""/>
-                </a>
-            </div>
-            <div role="banner">
-                <div class="drawer-header">
-                    <button type="button" class="drawer-toggle drawer-hamburger">
-                        <span class="sr-only">toggle navigation</span>
-                        <span class="drawer-hamburger-icon"></span>
-                    </button>
-                </div>
-                
-                <div class="drawer-main drawer-default">
-                    <nav class="drawer-nav" role="navigation">
-                        <div class="drawer-brand"><a href="./">Home</a></div>
-                        <ul class="drawer-menu">
-                            <li class="drawer-menu-item"><a class="sub1" href="#">経営理念</a></li>
-                            <li class="drawer-menu-item-sub sub1"><a href="../manage/index.html">経営方針</a></li>
-                            <li class="drawer-menu-item-sub sub1"><a href="../manage/boss_message.html">社長の挨拶</a></li>
-                            <li class="drawer-menu-item-sub"><a href="../bussiness/index.html">事業内容</a></li>
-                            <li class="drawer-menu-item"><a class="sub2" href="#">会社概要</a></li>
-                            <li class="drawer-menu-item-sub sub2"><a href="../company/index.html">会社情報</a></li>
-                            <li class="drawer-menu-item-sub sub2"><a href="../company/map.html">アクセスマップ</a></li>
-                            <li class="drawer-menu-item"><a class="sub3" href="#">採用情報</a></li>
-                            <li class="drawer-menu-item-sub sub3"><a href="../employment/index.html">募集要項</a></li>
-                            <li class="drawer-menu-item-sub sub3"><a href="../employment/briefing.html">IT技術者募集</a></li>
-                            <li class="drawer-menu-item-sub sub4"><a href="../event/index.html">研修会</a></li>
-                        </ul>
-                        <div class="drawer-footer"><span></span></div>
-                    </nav>
-                </div>
-            </div>
-            
-            <div class="drawer-overlay">
-                <!-- content -->
-            </div>
-        </div>
-        <!-- PC用サブメニュー -->
-        <div class="hidden-xs navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="../index.html">
-                        <img src="../img/new_ga_logo.jpg" alt=""/>
-                    </a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a class="hidden-xs" href="others/disclaimer.html">ディスクレイマー</a></li>
-                        <li><a class="hidden-xs" href="others/help.html">ヘルプ</a></li>
-                        <li><a class="hidden-xs" href="others/sitemap.html">サイトマップ</a></li>
-                        <li><a class="hidden-xs" href="others/inquiry.html">お問合せ</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-	</header>
-	<!-- end header -->
     
+    <script type="text/javascript">
+        writeHeader();
+    </script>
+	
     <!-- PC用メニュー -->
     <section id="featured" class="hidden-xs">
         <ul id="normal" class="dropmenu">
@@ -120,11 +60,23 @@
                         <article>
                             <div class="post-image">
                                 <div class="post-heading">
-                                    <h3><a href="#">test</a></h3>
+                                    <h3><a href="#">経営方針</a></h3>
                                 </div>
                             </div>
                             <p>
-                            test content
+                            今日、日本はあらたなステージを迎えています。<br><br>
+                            
+                            リーマンショック、311を経て、SNS、スマートデバイスといった情報を得介するコミュニケーションのスタイルが大幅に変化し、今やどの企業もITの活用と
+                            その活用を通してグローバル化を図らなければこの国際競争社会では遅れをとる現状になっております。<br><br>
+                            
+                            当社は、業務システム開発、ミドルウェア開発、組み込み型ソフトウェアの開発で 優秀な技術者を育成、派遣しております。
+                            また、当社オリジナルビジネスとして 産学協同で、次世代のビジネス展開を企画しております。<br><br>
+                            
+                            さらに、教育・研修ビジネスとして、現代の不況により正社員になれない若者、 ITとは全く縁がなかった若者などに、
+                            当社独自のIT教育・研修プログラムを 受講してもらい、一人前のSEに育てております。<br><br>
+                            
+                            彼らは当社正社員として採用され、現在はスーパーSEとして活躍しております。<br>
+                            これからも、全くITに触れていない人材からも、IT技術者になれる人材をどしどし発掘して、 IT業界のさらなる活性化を目指しております。<br>
                             </p>
                             <div class="bottom-article">
                                 <ul class="meta-post">
@@ -141,10 +93,10 @@
                             <div class="widget">
                                 <h5 class="widgetheading">サブメニュー</h5>
                                 <ul class="cat">
-                                    <li><i class="icon-angle-right"></i><a href="#">
+                                    <li><i class="icon-angle-right"></i><a href="index.html">
                                     経営方針
                                     </a></li>
-                                    <li><i class="icon-angle-right"></i><a href="#">
+                                    <li><i class="icon-angle-right"></i><a href="boss_message.html">
                                     社長の挨拶
                                     </a></li>
                                 </ul>
@@ -155,39 +107,14 @@
 			</div>
 		</div>
 	</div>
-    <footer id="footer">
-        <div id="sub-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="copyright">
-                        <ui class="hidden-xs">
-                            <li>
-                                情報セキュリティ基本方針
-                            </li>|
-                            <li>
-                                プライバシー・ポリシー
-                            </li>|
-                            <li>
-                                ディスクレイマー
-                            </li>
-                        </ui>
-                        <img class="iso-logo hidden-xs" src="../img/ISO27001logo.jpg" />
-                        
-                        <hr class="copyright-border hidden-xs">
-                        <p>
-                            Copyright &copy; Global Architect Co.,Ltd. All rights reserved.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-	</footer>
+    <script type="text/javascript">
+        writeFooter();
+    </script>
 </div>
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 <!-- javascript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="../js/jquery.js"></script>
 <script src="../js/jquery.easing.1.3.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/jquery.fancybox.pack.js"></script>
@@ -205,6 +132,7 @@
 <!-- drawer js -->
 <script src="../js/jquery.drawer.js"></script>
 <script src="../js/footerFixed.js"></script>
+
 <script>
     $(document).ready( function(){
         $(".drawer").drawer();
