@@ -1,29 +1,28 @@
-function writeHeader(){
-    alert("a")
-    $.ajax({
-        url: "../common/header.html",
-        dataType: "html",
-        cache: false,
-        success: function(data, textStatus){
-        alert("a")
-        },
-        error: function(xhr, textStatus, errorThrown){
-           alert("b")
-
-           // エラー処理
-        }
+$(function() {
+  $.ajax({
+         url: "../common/header.html",
+         dataType: "html",
+         cache: false,
+         success: function(data, textStatus){
+            $('#header').html(data);
+         },
+         error: function(xhr, textStatus, errorThrown){
+            // エラー処理
+            alert("ヘッダー情報が取得できませんでした。");
+         }
     });
-}
-function writeHeader(){
-    $.ajax({
-        url: "../common/header.html",
-        dataType: "html",
-        cache: false,
-        success: function(data, textStatus){
-           
-        },
-        error: function(xhr, textStatus, errorThrown){
-           // エラー処理
-        }
+  
+  $.ajax({
+         url: "../common/footer.html",
+         dataType: "html",
+         cache: false,
+         success: function(data, textStatus){
+            $('#footer').html(data);
+         },
+         error: function(xhr, textStatus, errorThrown){
+            // エラー処理
+            alert("フッター情報が取得できませんでした。");
+         }
     });
-}
+  
+});
