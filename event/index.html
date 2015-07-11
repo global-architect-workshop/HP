@@ -179,14 +179,9 @@
 </div>
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 <!-- javascript
-    ================================================== -->
+ ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="../js/jquery.js"></script>
-<script>
-$(document).ready(function(){
-    $("<script type='text/javascript' charset='utf-8' src='../js/commonSection.js'></scri" + "pt>").appendTo("body");
-});
-</script>
 <script src="../js/jquery.easing.1.3.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/jquery.fancybox.pack.js"></script>
@@ -198,36 +193,13 @@ $(document).ready(function(){
 <script src="../js/animate.js"></script>
 <script src="../js/custom.js"></script>
 
+
 <!-- jquery & iscroll & dropdown -->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.1/iscroll-min.js"></script>
 <script src="http://cdn.rawgit.com/ungki/bootstrap.dropdown/3.3.1/dropdown.min.js"></script>
 <!-- drawer js -->
 <script src="../js/jquery.drawer.js"></script>
 <script src="../js/footerFixed.js"></script>
-<script>
-    $(document).ready( function(){
-        $(".drawer").drawer();
-        $("li.sub1,li.sub2,li.sub3,li.sub4").css("display", "none");
-    });
-    // Opened
-    $('.drawer-toggle').on('drawer.opened');
-    
-    // Closed
-    $('.drawer-toggle').on('drawer.closed');
-    
-    
-    $("a.sub1").click(function () {
-        $("li.sub1").toggle(500);
-    });
-    $("a.sub2").click(function () {
-        $("li.sub2").toggle(500);
-    });
-    $("a.sub3").click(function () {
-        $("li.sub3").toggle(500);
-    });
-    $("a.sub4").click(function () {
-        $("li.sub4").toggle(500);
-    });
-</script>
+<script src="../js/commonSection.js"></script>
 </body>
 </html>
