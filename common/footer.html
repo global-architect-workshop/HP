@@ -5,10 +5,10 @@
                 <div class="copyright">
                     <ui class="hidden-xs">
                         <li>
-                            <a href="">情報セキュリティ基本方針</a>
+                            <a href="../security/index.html">情報セキュリティ基本方針</a>
                         </li>|
                         <li>
-                            <a href="">プライバシー・ポリシー</a>
+                            <a href="../security/policy.html">プライバシー・ポリシー</a>
                         </li>|
                         <li>
                             <a href="../others/disclaimer.html">ディスクレイマー</a>
@@ -25,3 +25,31 @@
         </div>
     </div>
 </footer>
+<script>
+    $(document).ready(function(){
+        $(".drawer").drawer();
+            $("li.sub1,li.sub2,li.sub3,li.sub4").css("display", "none");
+        });
+</script>
+
+<script>
+    // Opened
+    $('.drawer-toggle').on('drawer.opened');
+    
+    // Closed
+    $('.drawer-toggle').on('drawer.closed');
+    
+    
+    $("a.sub1").click(function () {
+        $("li.sub1").toggle(500);
+    });
+    $("a.sub2").click(function () {
+        $("li.sub2").toggle(500);
+    });
+    $("a.sub3").click(function () {
+        $("li.sub3").toggle(500);
+    });
+    $("a.sub4").click(function () {
+        $("li.sub4").toggle(500);
+    });
+</script>
