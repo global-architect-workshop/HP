@@ -787,12 +787,13 @@ ul.link-list li{
 	list-style:none;
 }
 
-footer ul.link-list li a{
+footer ui.link-list li a{
 	color:#fff;
 }
-footer ul.link-list li a:hover {
-	color:#eee;
+footer ui.link-list li a:hover {
+	color:#fff;
 }
+
 /* --- Heading style --- */
 
 h4.heading {
@@ -1565,6 +1566,23 @@ footer{
 	float:right;
 }
 
+ui.footer-menu-xs li {
+    float:left;
+    text-align:left;
+}
+
+section.footer-table {
+    width:100%;
+    text-align:left;
+}
+section.footer-table img{
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right:30px;
+    width: 200px;
+    height: auto;
+}
 
 /* ===============================
  Live preview purpose
@@ -1849,7 +1867,12 @@ table.default td{
     border-right: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
 }
-
+td.nowrap {
+    white-space: nowrap;
+}
+td.subject {
+    font-weight:bold;
+}
 /* firefox */
 @-moz-document url-prefix() {
     table.company th::after {
