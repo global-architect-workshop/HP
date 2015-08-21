@@ -1901,6 +1901,30 @@ footer li a {
     color :#fff !important;
 }
 
+// event ///////////////////////////////////////
+.con-bro-sub-left, .con-bro-sub-right {
+}
+
+.con-bro-sub-left img {
+    margin-right: 3px;
+    float:left;
+}
+
+.con-bro-sub-right img {
+    margin-left: 3px;
+    float:right;
+}
+
+.clearboth {
+    clear:both;
+}
+
+.blue-line {
+    border:dotted 2px #ccc;
+}
+
+// event end ///////////////////////////////////
+
 /* =============================
 21. Media queries 
 ============================= */
@@ -2050,6 +2074,32 @@ footer li a {
 	footer .col-lg-7, footer .col-lg-8, footer .col-lg-9, footer .col-lg-10, footer .col-lg-11, footer .col-lg-12{
 		margin-bottom:20px;
 	}
+
+    // event ///////////////////////////////////////
+    
+    .con-bro-sub-left, .con-bro-sub-right {
+        margin-bottom: 5px; 
+    }
+
+    .con-bro-sub-left img {
+        margin: 0;
+        float:none;
+    }
+
+    .con-bro-sub-right img {
+        margin: 0;
+        float:none;
+    }
+
+    .clearboth {
+        clear:both;
+    }
+
+    .blue-line {
+        border:dotted 2px #ccc;
+    }
+
+    // event end ///////////////////////////////////
 
 	#sub-footer ul.social-network {
 		float:left;
