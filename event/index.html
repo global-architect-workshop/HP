@@ -8,8 +8,9 @@
 <script src="../js/jquery.js"></script>
 <script>
     $(document).ready(function(){
-                      $("<script type='text/javascript' charset='utf-8' src='../js/commonSection.js'></scri" + "pt>").appendTo("body");
-                      });
+        $("<script type='text/javascript' charset='utf-8' src='../js/commonSection.js'></scri" + "pt>").appendTo("body");
+        changeMenu(2015);
+    });
     </script>
 <!-- css -->
 <link href="../css/drawer.css" rel="stylesheet" />
@@ -34,28 +35,17 @@
                         <article>
                             <div class="post-image">
                                 <div class="post-heading">
-                                    <h3><a href="#">経営方針</a></h3>
+                                    <h3><a href="#">イベント一覧</a></h3>
+                                    <div class="widget">
+                                        <div id="mainmenu"></div>
+                                    </div>
                                 </div>
                             </div>
-                            <p>
-                            今日、日本はあらたなステージを迎えています。<br><br>
                             
-                            リーマンショック、311を経て、SNS、スマートデバイスといった情報を得介するコミュニケーションのスタイルが大幅に変化し、今やどの企業もITの活用と
-                            その活用を通してグローバル化を図らなければこの国際競争社会では遅れをとる現状になっております。<br><br>
-                            
-                            当社は、業務システム開発、ミドルウェア開発、組み込み型ソフトウェアの開発で 優秀な技術者を育成、派遣しております。
-                            また、当社オリジナルビジネスとして 産学協同で、次世代のビジネス展開を企画しております。<br><br>
-                            
-                            さらに、教育・研修ビジネスとして、現代の不況により正社員になれない若者、 ITとは全く縁がなかった若者などに、
-                            当社独自のIT教育・研修プログラムを 受講してもらい、一人前のSEに育てております。<br><br>
-                            
-                            彼らは当社正社員として採用され、現在はスーパーSEとして活躍しております。<br>
-                            これからも、全くITに触れていない人材からも、IT技術者になれる人材をどしどし発掘して、 IT業界のさらなる活性化を目指しております。<br>
-                            </p>
                             <div class="bottom-article">
                                 <ul class="meta-post">
                                     <li><i class="icon-calendar"></i>
-                                    経営理念
+                                    イベント
                                     </li>
                                     
                                 </ul>
@@ -67,12 +57,7 @@
                             <div class="widget">
                                 <h5 class="widgetheading">サブメニュー</h5>
                                 <ul class="cat">
-                                    <li><i class="icon-angle-right"></i><a href="index.html">
-                                    経営方針
-                                    </a></li>
-                                    <li><i class="icon-angle-right"></i><a href="boss_message.html">
-                                    社長の挨拶
-                                    </a></li>
+                                    <li><a class="submenu" href="#"><i class="icon-angle-right">2015</i></a></li>
                                 </ul>
                             </div>
                         </aside>
@@ -107,5 +92,29 @@
 <script src="../js/jquery.drawer.js"></script>
 <script src="../js/footerFixed.js"></script>
 <script src="../js/commonSection.js"></script>
+<script>
+// サブメニュークリック時
+$('a.submenu').click(function() {
+    changeMenu(this.text);
+});
+
+// メニューを変更
+function changeMenu(year) {
+    $.ajax({
+        url: "../event/menuList/"+year+".html",
+        dataType: "html",
+        cache: false,
+        success: function(data, textStatus){
+           $('#mainmenu').html(data);
+        },
+        error: function(xhr, textStatus, errorThrown){
+           // エラー処理
+           alert("メニュー情報が取得できませんでした。");
+        }
+    });
+
+}
+
+</script>
 </body>
 </html>

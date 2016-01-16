@@ -1,6 +1,6 @@
 $(function() {
   $.ajax({
-         url: "../common/header.html",
+         url: "http://www.global-architect.co.jp/common/header.html",
          dataType: "html",
          cache: false,
          success: function(data, textStatus){
@@ -13,7 +13,7 @@ $(function() {
     });
   
   $.ajax({
-         url: "../common/footer.html",
+         url: "http://www.global-architect.co.jp/common/footer.html",
          dataType: "html",
          cache: false,
          success: function(data, textStatus){
