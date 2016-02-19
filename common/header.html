@@ -1,10 +1,19 @@
+<script>
+    // URLのhostを自動置換
+    $("header a").each(function(){
+        var host = window.location.hostname;
+        var i = $(this).attr("href").replace("[host]", host);
+        $(this).attr("href", i);
+    });
+</script>
+
 <!-- start header -->
 <header>
     <!-- スマホ用メニュー -->
     <div class="visible-xs drawer drawer-right" style="overflow:auto;">
         <div>
-            <a class="navbar-brand" href="../index.html">
-                <img src="../img/new_ga_logo.jpg" alt=""/>
+            <a class="navbar-brand" href="http://[host]/index.html">
+                <img src="http://www.global-architect.co.jp/img/new_ga_logo.jpg" alt=""/>
             </a>
         </div>
         <div role="banner">
@@ -17,20 +26,20 @@
             
             <div class="drawer-main drawer-default">
                 <nav class="drawer-nav" role="navigation">
-                    <div class="drawer-brand"><a href="../index.html">Home</a></div>
+                    <div class="drawer-brand"><a href="http://[host]/index.html">Home</a></div>
                     <ul class="drawer-menu">
                         <li class="drawer-menu-item"><a class="sub1" href="#">経営理念</a></li>
-                        <li class="drawer-menu-item-sub sub1"><a href="../manage/index.html">経営方針</a></li>
-                        <li class="drawer-menu-item-sub sub1"><a href="../manage/boss_message.html">社長の挨拶</a></li>
-                        <li class="drawer-menu-item-sub"><a href="../bussiness/index.html">事業内容</a></li>
+                        <li class="drawer-menu-item-sub sub1"><a href="http://[host]/manage/index.html">経営方針</a></li>
+                        <li class="drawer-menu-item-sub sub1"><a href="http://[host]/manage/boss_message.html">社長の挨拶</a></li>
+                        <li class="drawer-menu-item-sub"><a href="http://[host]/bussiness/index.html">事業内容</a></li>
                         <li class="drawer-menu-item"><a class="sub2" href="#">会社概要</a></li>
-                        <li class="drawer-menu-item-sub sub2"><a href="../company/index.html">会社情報</a></li>
-                        <li class="drawer-menu-item-sub sub2"><a href="../company/map.html">アクセスマップ</a></li>
+                        <li class="drawer-menu-item-sub sub2"><a href="http://[host]/company/index.html">会社情報</a></li>
+                        <li class="drawer-menu-item-sub sub2"><a href="http://[host]/company/map.html">アクセスマップ</a></li>
                         <li class="drawer-menu-item"><a class="sub3" href="#">採用情報</a></li>
-                        <li class="drawer-menu-item-sub sub3"><a href="../employment/index.html">募集要項</a></li>
-                        <li class="drawer-menu-item-sub sub3"><a href="../employment/briefing.html">IT技術者募集</a></li>
-                        <li class="drawer-menu-item"><a href="../workshop/index.html">研修会</a></li>
-                        <li class="drawer-menu-item"><a href="../event/index.html">イベント</a></li>
+                        <li class="drawer-menu-item-sub sub3"><a href="http://[host]/employment/index.html">募集要項</a></li>
+                        <li class="drawer-menu-item-sub sub3"><a href="http://[host]/employment/briefing.html">IT技術者募集</a></li>
+                        <li class="drawer-menu-item"><a href="http://[host]/workshop/index.html">研修会</a></li>
+                        <li class="drawer-menu-item"><a href="http://[host]/event/index.html">イベント</a></li>
                     </ul>
                     <div class="drawer-footer"><span></span></div>
                 </nav>
@@ -50,17 +59,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../index.html">
-                    <img src="../img/new_ga_logo.jpg" alt=""/>
+                <a class="navbar-brand" href="http://[host]/index.html">
+                    <img src="http://www.global-architect.co.jp/img/new_ga_logo.jpg" alt=""/>
                 </a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a class="hidden-xs" href="../others/disclaimer.html">ディスクレイマー</a></li>
-                    <li><a class="hidden-xs" href="../others/help.html">ヘルプ</a></li>
-                    <li><a class="hidden-xs" href="../others/sitemap.html">サイトマップ</a></li>
-                    <li><a class="hidden-xs" href="../others/inquiry.html">お問合せ</a></li>
-                    <li><a class="hidden-xs" href="../workshop/index.html">研修会</a></li>
+                    <li><a class="hidden-xs" href="http://[host]/others/disclaimer.html">ディスクレイマー</a></li>
+                    <li><a class="hidden-xs" href="http://[host]/others/help.html">ヘルプ</a></li>
+                    <li><a class="hidden-xs" href="http://[host]/others/sitemap.html">サイトマップ</a></li>
+                    <li><a class="hidden-xs" href="http://[host]/others/inquiry.html">お問合せ</a></li>
+                    <li><a class="hidden-xs" href="http://[host]/workshop/index.html">研修会</a></li>
                 </ul>
             </div>
         </div>
@@ -70,25 +79,25 @@
         <ul id="normal" class="dropmenu">
             <li><a href="#">経営理念</a>
                 <ul>
-                    <li><a href="../manage/index.html">経営方針</a></li>
-                    <li><a href="../manage/boss_message.html">社長の挨拶</a></li>
+                    <li><a href="http://[host]/manage/index.html">経営方針</a></li>
+                    <li><a href="http://[host]/manage/boss_message.html">社長の挨拶</a></li>
                 </ul>
             </li>
-            <li><a href="../bussiness/index.html">事業内容</a></li>
+            <li><a href="http://[host]/bussiness/index.html">事業内容</a></li>
             <li><a href="#">会社概要</a>
                 <ul>
-                    <li><a href="../company/index.html">会社情報</a></li>
-                    <li><a href="../company/map.html">アクセスマップ</a></li>
+                    <li><a href="http://[host]/company/index.html">会社情報</a></li>
+                    <li><a href="http://[host]/company/map.html">アクセスマップ</a></li>
                 </ul>
             </li>
             <li><a href="#">採用情報</a>
                 <ul>
-                    <li><a href="../employment/index.html">募集要項</a></li>
-                    <li><a href="../employment/briefing.html">IT技術者募集</a></li>
+                    <li><a href="http://[host]/employment/index.html">募集要項</a></li>
+                    <li><a href="http://[host]/employment/briefing.html">IT技術者募集</a></li>
                 </ul>
             </li>
-            <li><a href="../workshop/index.html">研修会</a></li>
-            <li><a href="../event/index.html">イベント</a></li>
+            <li><a href="http://[host]/workshop/index.html">研修会</a></li>
+            <li><a href="http://[host]/event/index.html">イベント</a></li>
         </ul>
     </section>
 </header>

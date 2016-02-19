@@ -5,30 +5,30 @@
                 <div class="copyright">
                     <ui class="hidden-xs">
                         <li>
-                            <a href="../security/index.html">情報セキュリティ基本方針</a>
+                            <a href="http://[host]/security/index.html">情報セキュリティ基本方針</a>
                         </li>|
                         <li>
-                            <a href="../security/policy.html">プライバシー・ポリシー</a>
+                            <a href="http://[host]/security/policy.html">プライバシー・ポリシー</a>
                         </li>|
                         <li>
-                            <a href="../others/disclaimer.html">ディスクレイマー</a>
+                            <a href="http://[host]/others/disclaimer.html">ディスクレイマー</a>
                         </li>
                     </ui>
-                    <img class="iso-logo hidden-xs" src="../img/ISO27001logo.jpg" />
+                    <img class="iso-logo hidden-xs" src="http://www.global-architect.co.jp/img/ISO27001logo.jpg" />
                     
                     <section class="visible-xs footer-table">
                         <ul>
                             <li>
-                                <a href="../security/index.html">情報セキュリティ基本方針</a>
+                                <a href="http://[host]/security/index.html">情報セキュリティ基本方針</a>
                             </li>
                             <li>
-                                <a href="../security/policy.html">プライバシー・ポリシー</a>
+                                <a href="http://[host]/security/policy.html">プライバシー・ポリシー</a>
                             </li>
                             <li>
-                                <a href="../others/disclaimer.html">ディスクレイマー</a>
+                                <a href="http://[host]/others/disclaimer.html">ディスクレイマー</a>
                             </li>
                         </ul>
-                        <img src="../img/ISO27001logo.jpg" />
+                        <img src="http://www.global-architect.co.jp/img/ISO27001logo.jpg" />
                     </section>
                     <hr class="copyright-border">
                     <p>
@@ -44,7 +44,14 @@
     $(document).ready(function(){
         $(".drawer").drawer();
             $("li.sub1,li.sub2,li.sub3,li.sub4").css("display", "none");
-        });
+    });
+
+    // URLのhostを自動置換
+    $("footer a").each(function(){
+        var host = window.location.hostname;
+        var i = $(this).attr("href").replace("[host]", host);
+        $(this).attr("href", i);
+    });
 </script>
 
 <script>
