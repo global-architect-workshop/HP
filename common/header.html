@@ -1,7 +1,7 @@
 <script>
+    // URLのhostを自動置換
     $("header a").each(function(){
         var host = window.location.hostname;
-        //replaceで"[host]"を"host + /"に置き換える
         var i = $(this).attr("href").replace("[host]", host + "/");
         $(this).attr("href", i);
     });
