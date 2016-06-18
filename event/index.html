@@ -9,7 +9,8 @@
 <script>
     $(document).ready(function(){
         $("<script type='text/javascript' charset='utf-8' src='../js/commonSection.js'></scri" + "pt>").appendTo("body");
-        changeMenu(2015);
+        changeMenu(2016);
+        $("#eventYear").text("2016年");
     });
     </script>
 <!-- css -->
@@ -35,7 +36,7 @@
                         <article>
                             <div class="post-image">
                                 <div class="post-heading">
-                                    <h3><a href="#">イベント一覧</a></h3>
+                                    <h3><a href="#"><span id="eventYear"></span>イベント一覧</a></h3>
                                     <div class="widget">
                                         <div id="mainmenu"></div>
                                     </div>
@@ -56,6 +57,10 @@
                         <aside class="right-sidebar">
                             <div class="widget">
                                 <h5 class="widgetheading">サブメニュー(年別リスト)</h5>
+                                
+                                <ul class="cat">
+                                    <li><a class="submenu" href="#"><i class="icon-angle-right">2016</i></a></li>
+                                </ul>
                                 <ul class="cat">
                                     <li><a class="submenu" href="#"><i class="icon-angle-right">2015</i></a></li>
                                 </ul>
@@ -96,6 +101,7 @@
 // サブメニュークリック時
 $('a.submenu').click(function() {
     changeMenu(this.text);
+    $("#eventYear").text(this.text + "年");
 });
 
 // メニューを変更
