@@ -1,0 +1,77 @@
+<footer id="footer">
+    <div id="sub-footer">
+        <div class="container">
+            <div class="row">
+                <div class="copyright">
+                    <ui class="hidden-xs">
+                        <li>
+                            <a href="http://[host]/security/index.html">情報セキュリティ基本方針</a>
+                        </li>|
+                        <li>
+                            <a href="http://[host]/security/policy.html">プライバシー・ポリシー</a>
+                        </li>|
+                        <li>
+                            <a href="http://[host]/others/disclaimer.html">ディスクレイマー</a>
+                        </li>
+                    </ui>
+                    <img class="iso-logo hidden-xs" src="http://www.global-architect.co.jp/img/ISO27001logo.jpg" />
+                    
+                    <section class="visible-xs footer-table">
+                        <ul>
+                            <li>
+                                <a href="http://[host]/security/index.html">情報セキュリティ基本方針</a>
+                            </li>
+                            <li>
+                                <a href="http://[host]/security/policy.html">プライバシー・ポリシー</a>
+                            </li>
+                            <li>
+                                <a href="http://[host]/others/disclaimer.html">ディスクレイマー</a>
+                            </li>
+                        </ul>
+                        <img src="http://www.global-architect.co.jp/img/ISO27001logo.jpg" />
+                    </section>
+                    <hr class="copyright-border">
+                    <p>
+                    Copyright &copy; Global Architect Co.,Ltd. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    $(document).ready(function(){
+        $(".drawer").drawer();
+            $("li.sub1,li.sub2,li.sub3,li.sub4").css("display", "none");
+    });
+
+    // URLのhostを自動置換
+    $("footer a").each(function(){
+        var host = window.location.hostname;
+        var i = $(this).attr("href").replace("[host]", host);
+        $(this).attr("href", i);
+    });
+</script>
+
+<script>
+    // Opened
+    $('.drawer-toggle').on('drawer.opened');
+    
+    // Closed
+    $('.drawer-toggle').on('drawer.closed');
+    
+    
+    $("a.sub1").click(function () {
+        $("li.sub1").toggle(500);
+    });
+    $("a.sub2").click(function () {
+        $("li.sub2").toggle(500);
+    });
+    $("a.sub3").click(function () {
+        $("li.sub3").toggle(500);
+    });
+    $("a.sub4").click(function () {
+        $("li.sub4").toggle(500);
+    });
+</script>
